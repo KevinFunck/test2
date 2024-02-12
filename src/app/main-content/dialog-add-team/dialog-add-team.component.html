@@ -3,11 +3,11 @@
     <mat-card-content class="input">
         <td><mat-form-field class="example-full-width">
                 <mat-label>Team name</mat-label>
-                <input matInput>
+                <input [(ngModel)]="teamName" matInput>
             </mat-form-field></td>
     </mat-card-content>
     <div class="btn-position">
         <button (click)="close()" mat-raised-button color="primary">Close</button>
-        <button mat-raised-button color="primary">Save</button>
+        <button (click)="saveTeam()" mat-raised-button color="primary">Save</button>
     </div>
 </mat-card>

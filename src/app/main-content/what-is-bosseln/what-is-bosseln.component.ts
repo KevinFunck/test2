@@ -18,7 +18,7 @@ export class WhatIsBosselnComponent {
 
   openAddTeam() {
     this.dialog.open(DialogAddTeamComponent);
-    //document.getElementById('bosselntext')?.classList.add(d-none);
+    document.getElementById('text')?.classList.add('d-none');
   }
 
 
