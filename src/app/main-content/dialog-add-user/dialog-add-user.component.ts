@@ -17,13 +17,16 @@ import { DialogAddTeamComponent } from '../dialog-add-team/dialog-add-team.compo
 export class DialogAddUserComponent {
   playerName:string = '';
   playerId:string = '';
+  teamId:string = '';
 
   constructor(public teamService: TeamServiceService, public dialogRef: MatDialogRef<DialogAddTeamComponent>) {}
 
   saveUser() {
     this.teamService.user.PlayerName = this.playerName;
     this.teamService.user.playerId = this.playerId;
+    this.teamService.user.teamId = this.teamId;
     this.teamService.saveUser();
+    this.teamService.getTeamByPlayerId(teamId: string); 
     this.closeUser();
     
   }

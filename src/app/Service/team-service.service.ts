@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Team } from '../../Models/team.class';
-import {Firestore, addDoc, collection, onSnapshot } from '@angular/fire/firestore';
+import {Firestore, addDoc, collection, onSnapshot, query, where } from '@angular/fire/firestore';
 import { User } from '../../Models/user.class';
 
 
@@ -66,6 +66,7 @@ export class TeamServiceService {
     return {
       playerId: id || "",
       playerName: obj. PlayerName || "",
+      teamId: obj. teamId || ""
     }
   }
 
@@ -80,6 +81,12 @@ export class TeamServiceService {
   ngOnDestroy() {
     this.subTeamList();
     this.subUserList();
+  }
+
+  getTeamByPlayerId(teamId: string) {
+    const playerCollRef = collection(this.firestore, 'user');
+    const q = query(playerCollRef, where("teamId", "==", teamId));
+    return q;
   }
 
 
