@@ -1,0 +1,54 @@
+.d-none {
+    display: none;
+}
+
+h2 {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.team-container {
+    max-width: 300px;
+    min-width: 300px;
+    height: 40px;
+    background-color: rgb(214, 205, 205);
+    margin: 10px;
+}
+
+.team-position {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+   
+    display: flex;
+    justify-content: center;
+}
+
+.position-team-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.finish-btn {
+    width: 20px;
+}
+
+.finish-btn-position {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+table {
+    background-color: rgb(192, 183, 183);  
+}
+
+td {
+    display: flex;
+    justify-content: center;
+}

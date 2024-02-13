@@ -18,6 +18,7 @@ import { TeamServiceService } from '../../Service/team-service.service';
 export class DialogAddTeamComponent {
   teamName:string = '';
   id:string = '';
+  //openTeam = document.getElementById('teamContent')?.classList.remove('d-none');
   
 
 
@@ -32,7 +33,16 @@ export class DialogAddTeamComponent {
     this.teamService.team.teamName = this.teamName;
     this.teamService.team.id = this.id;
     this.teamService.saveTeam();
-    
+    this.dialogRef.close(DialogAddTeamComponent);
+    this.controllFinish();
+  }
+
+  controllFinish() {
+    let count:number = this.teamService.teamList.length;
+
+    if(0 < count) {
+      document.getElementById('finish')?.classList.remove('d-none');
+    }
   }
 
 }

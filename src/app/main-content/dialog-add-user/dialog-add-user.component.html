@@ -1,0 +1,13 @@
+<mat-card class="add-user-container">
+    <h1 class="title">Add a player</h1>
+    <mat-card-content class="input">
+        <td><mat-form-field class="example-full-width">
+                <mat-label>Team name</mat-label>
+                <input [(ngModel)]="playerName" matInput>
+            </mat-form-field></td>
+    </mat-card-content>
+    <div class="btn-position">
+        <button (click)="closeUser()" mat-raised-button color="primary">Close</button>
+        <button (click)="saveUser()" mat-raised-button color="primary">Save</button>
+    </div>
+</mat-card>

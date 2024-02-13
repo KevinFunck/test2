@@ -1,15 +1,15 @@
 export class User {
-    id: string;
-    name: string;
+    playerId: string;
+    PlayerName: string;
 
     constructor(obj?: any) {
-        this.id = obj ? obj.id : '';
-        this.name = obj ? obj.name : '';
+        this.playerId = obj ? obj.playerId : '';
+        this.PlayerName = obj ? obj.PlayerName : '';
     }
 
     public toJSON() {
         return {
-            name: this.name
+            PlayerName: this.PlayerName
         };
     }
 }
