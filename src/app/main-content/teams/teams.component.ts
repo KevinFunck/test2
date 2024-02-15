@@ -30,15 +30,20 @@ export class TeamsComponent {
     return this.teamService.userList;
   }
 
-  openAddUserDialog() {
-    this.dialog.open(DialogAddUserComponent);
+  openAddUserDialog(teamId:string) {
+    console.log(teamId);
+    const dialog = this.dialog.open(DialogAddUserComponent);
+    dialog.componentInstance.teamId = teamId;
   }
 
   finishTheTeamName() {
    document.getElementById('btnAndText')?.classList.add('d-none');
    document.getElementById('finish')?.classList.add('d-none');
    document.getElementById('addUserBtn')?.classList.remove('d-none');
+  }
 
+  finishAddPlayer() {
+    document.getElementById('addAplayer')?.classList.add('d-none');
   }
 
 }

@@ -18,6 +18,7 @@ export class DialogAddUserComponent {
   playerName:string = '';
   playerId:string = '';
   teamId:string = '';
+  //id = this.teamService.team.id;
 
   constructor(public teamService: TeamServiceService, public dialogRef: MatDialogRef<DialogAddTeamComponent>) {}
 
@@ -26,7 +27,7 @@ export class DialogAddUserComponent {
     this.teamService.user.playerId = this.playerId;
     this.teamService.user.teamId = this.teamId;
     this.teamService.saveUser();
-    this.teamService.getTeamByPlayerId(teamId: string); 
+    //this.teamService.getTeamByPlayerId(); 
     this.closeUser();
     
   }

@@ -5,9 +5,12 @@
             <table *ngFor="let user of getUserList()">
                 <td>{{user.playerName}}</td>
             </table>
-            <button (click)=" openAddUserDialog()" mat-raised-button color="primary">Add a player</button>
+            <button id="addAplayer" (click)=" openAddUserDialog()" mat-raised-button color="primary">Add a player</button>
         </mat-card>
 
+    </div>
+    <div class="finish-btn-position">
+        <button class="finish-btn " (click)="finishAddPlayer()" mat-raised-button color="primary">Start the game</button>     
     </div>
     <div class="finish-btn-position">
         <button class="finish-btn d-none" id="finish" (click)="finishTheTeamName()" mat-raised-button color="primary">Finish</button>     
