@@ -42,6 +42,7 @@ export class DialogAddTeamComponent {
 
     if(0 < count) {
       document.getElementById('finish')?.classList.remove('d-none');
+      
     }
   }
 

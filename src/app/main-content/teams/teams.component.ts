@@ -26,14 +26,24 @@ export class TeamsComponent {
     return this.teamService.teamList;
   }
   
-  getUserList() {
-    return this.teamService.userList;
+  getUserList( teamId: string  ) {
+    // Create new user list
+    let users = [];
+
+    for( let i = 0; i < this.teamService.userList.length; i++ ){
+      let newUser = this.teamService.userList[i];
+      let userTeamid = newUser.teamId;
+      if( teamId == userTeamid )
+        users.push( this.teamService.userList[i] );
+    }
+    
+    return users;
   }
 
-  openAddUserDialog(teamId:string) {
+  openAddUserDialog(teamId: string,) {
     console.log(teamId);
     const dialog = this.dialog.open(DialogAddUserComponent);
-    dialog.componentInstance.teamId = teamId;
+    dialog.componentInstance.teamId = teamId; 
   }
 
   finishTheTeamName() {

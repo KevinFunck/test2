@@ -83,11 +83,6 @@ export class TeamServiceService {
     this.subUserList();
   }
 
-  getTeamByPlayerId(Id: string) {
-    const playerCollRef = collection(this.firestore, 'teams');
-    const q = query(playerCollRef, where("Id", "==", Id));
-    return q;
-  }
 
  
 

@@ -27,6 +27,12 @@ export class DialogAddUserComponent {
     this.teamService.user.playerId = this.playerId;
     this.teamService.user.teamId = this.teamId;
     this.teamService.saveUser();
+
+    console.log( "this.teamService.user", this.teamService.user);
+    console.log( "this.teamService.team", this.teamService.team);
+    console.log( "this.teamService.teamList", this.teamService.teamList);
+    console.log( "this.teamService.userList", this.teamService.userList);
+
     //this.teamService.getTeamByPlayerId(); 
     this.closeUser();
     
