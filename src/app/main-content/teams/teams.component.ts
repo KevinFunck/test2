@@ -18,9 +18,11 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './teams.component.scss'
 })
 export class TeamsComponent {
+  
 
-
-  constructor(private teamService: TeamServiceService,public dialog: MatDialog  ) {}
+  constructor(private teamService: TeamServiceService,public dialog: MatDialog  ) {
+ 
+  }
 
   getlist() {
     return this.teamService.teamList;
@@ -55,5 +57,11 @@ export class TeamsComponent {
   finishAddPlayer() {
     document.getElementById('addAplayer')?.classList.add('d-none');
   }
+
+  start() {
+    document.querySelector('.team-container')?.classList.add('d-none');
+    document.getElementById('start')?.classList.add('d-none');
+  }
+  
 
 }

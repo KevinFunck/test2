@@ -1,18 +1,29 @@
-<div class="position-team-btn">
-    <div class="team-position">
-        <mat-card class="team-container" *ngFor="let team of getlist()">
-            <h2>{{team.teamName}}</h2>
-            <h2>{{team.id}}</h2>
-            <table *ngFor="let user of getUserList(team.id)">
-                <td>{{user.playerName}}</td>
-        
-            </table>
-            <button id="addAplayer" (click)=" openAddUserDialog(team.id)" mat-raised-button color="primary">Add a player</button>
-        </mat-card>
+<div class="position-teams">
+
+    
+
+    <div class="team-container" *ngFor="let team of getlist()">
+
+        <h2>{{team.teamName}}</h2>
+        <table style="text-align: center;" *ngFor="let user of getUserList(team.id)">
+            <td class="td">{{user.playerName}}</td>
+        </table>
+        <button class="open-add-player" (click)=" openAddUserDialog(team.id)" mat-raised-button color="primary">Add
+            a
+            player</button>
 
     </div>
-   
-    <div class="finish-btn-position">
-        <button class="finish-btn d-none" id="finish" (click)="finishTheTeamName()" mat-raised-button color="primary">Finish</button>     
-    </div>
+
+
+</div>
+<div class="position-btn-start-the-game">
+    <button id="start" (click)="start()" style="margin-top: 50px;" mat-raised-button color="primary">Start the game</button>
+</div>
+
+<div class="position-btn-start-the-game">
+    <button class=" finish-btn d-none" id="start" (click)="start()" style="margin-top: 50px;" mat-raised-button color="primary">Finish</button>
+</div>
+
+<div>
+
 </div>

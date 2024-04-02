@@ -1,5 +1,5 @@
-<div id="btnAndText"  class="bossel-text">
-    <div id="text">
+<div id="btnAndText" class="bossel-text">
+    <div style="display: none;" id="text">
         <h2>What is Boßeln ?</h2>
 
         <span>Boßeln is a traditional German sport that involves throwing a small ball (the "boßel") along a
@@ -18,14 +18,17 @@
         </span>
     </div>
 
-
     <div class="line"></div>
-    <div>
+    <div id="started">
         <h2>Get started add a team</h2>
         <div class="example-button-container">
             <button (click)="openAddTeam()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
                 <mat-icon>add</mat-icon>
             </button>
         </div>
+    </div>
+
+    <div> 
+        <button id="finish_add" style="margin-top: 50px;" (click)="startTheGame()" mat-raised-button color="primary">Finish the teams</button>     
     </div>
 </div>
